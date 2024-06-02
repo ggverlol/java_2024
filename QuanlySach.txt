@@ -1,0 +1,54 @@
+create table hoadon
+(
+    MaHD         varchar(10)  not null
+        primary key,
+    NgayGiaoDich varchar(100) null,
+    MaTaiKhoan   varchar(10)  null,
+    MaSach       varchar(10)  null,
+    SoLuong      varchar(10)  null,
+    ThanhTien    varchar(10)  null
+);
+
+create table nhaxuatban
+(
+    MaNXB  varchar(10) not null
+        primary key,
+    TenNXB varchar(50) null,
+    DiaChi varchar(50) null,
+    SDT    bigint      null
+);
+
+create table sach
+(
+    MaSach     varchar(10)   not null
+        primary key,
+    TenSach    varchar(100)  null,
+    NamXuatBan smallint      null,
+    SoTrang    smallint      null,
+    MaNXB      varchar(10)   null,
+    DonGia     decimal(9, 4) null,
+    SoLuongCon smallint      null,
+    MaTG       varchar(10)   null
+);
+
+create table sachtronggiohang
+(
+    MaTaiKhoan varchar(10)  null,
+    MaSach     varchar(10)  null,
+    SoLuong    varchar(10)  null,
+    ThanhTien  varchar(100) null
+);
+
+create table tacgia
+(
+    MaTG  varchar(10) null,
+    TenTG varchar(50) null
+);
+
+create table taikhoan
+(
+    MaTaiKhoan smallint   null,
+    MatKhau    smallint   null,
+    VaiTro     varchar(5) null
+);
+
